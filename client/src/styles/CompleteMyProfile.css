@@ -1,0 +1,233 @@
+/* ProfileEditForm.css */
+
+/* ... Existing CSS ... */
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:auto; 
+    
+  }
+  .typing-text {
+    font-size: 35px;
+    font-weight: bold;
+    
+    animation: typingAnimation 0.5s infinite;
+    border-right: 5px solid rgb(4, 59, 122);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  @keyframes typingAnimation {
+    from {
+      width: 0;
+    }
+  }
+  .input-group {
+    margin-right: 10px;
+  }
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Adjusted the minimum height for better responsiveness */
+    background: radial-gradient(circle, #100665, #050105, #09026d);
+    width:auto;
+    background-image: url('../images/bg.jpg'); /* Use the same path as imported above */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .profile {
+    background: radial-gradient(circle, #abbac2, #bdced4, #1e3185);
+    border-top: 5px solid #a9aac4;
+    border-bottom-left-radius: 220px; /* Adjusted border radius for better appearance */
+    border-bottom-right-radius: 220px;
+    border-top-left-radius: 220px;
+    border-top-right-radius: 220px;
+    box-shadow: 0 2.5px 5px #ccc;
+    width: 65%;
+    padding: 20px;
+    border: 5px solid #050105; /* Set the initial border color and thickness */
+    animation: pulse-border 2s infinite;
+   
+     margin: 100px auto;
+  }
+  
+  @keyframes pulse-border {
+    0% {
+      border-color: #000109; /* Initial border color */
+    }
+    
+    100% {
+      border-color: #9184b7; /* Final border color */
+    }
+  }
+  .photo-container {
+    position: relative;
+    width: 125px; /* Adjust the width and height as needed */
+    height: 125px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 70%;
+    border:3px solid #2e2b3b;
+    
+    background: #ddd;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .left {
+    margin-right: 10px; /* Adjust the space between fields */
+  }
+  .photo {
+    width: 100%;
+    height: 100%;
+    background: url("https://www.adtechnology.co.uk/images/UGM-default-user.png") center/cover no-repeat;
+    border-radius: 60%;
+  }
+  
+  .photo:hover::before {
+    content: "Click to upload";
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.8;
+    font-size: 14px;
+  }
+  
+  
+  .form-field label {
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: lighter;
+    font-size: 16px; /* Adjusted font size */
+    color: #121010; /* Adjusted text color */
+    margin-bottom: 5px;
+    text-align: left; 
+    align-items:flex-end;/* Added margin-bottom for spacing */
+  }
+  .form-field input {
+      text-align: left; 
+      
+  }
+  .form-field  { 
+      align-items: left;
+      text-align: left; 
+  }
+  .form-group 
+  {
+    display: flex;
+    flex-direction: row;
+  }
+  .form-group label {
+    width: 100px; /* Set the desired width for the label */
+   
+     
+    padding-inline: 0px;/* Adjust the margin as needed */
+  }
+  .form-group input {
+    flex: 1; /* Take remaining space */
+    padding: 5px; /* Adjust padding as needed */
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #ddd;
+    align-items: left;
+    text-align: left;
+  }
+  .form-group input.outlined {
+    flex: 1; /* Take remaining space */
+    padding: 8px; /* Adjust padding as needed */
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Adjust the border-radius for rounded corners */
+    background-color: #fff; /* Background color */
+    outline: none; /* Remove default outline */
+  }
+  
+  
+  .form-field input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #a09696;
+    border-radius: 3px;
+    background-color: #ddd;
+    
+    text-align: left;
+    align-items: center;
+  }
+  
+  
+  .Btn {
+    width: 200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 15px 0;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #34378f;
+    border: none;
+    border-radius: 3px;
+    transition: 0.5s ease;
+  }
+  
+  .button-container {
+    width: 30%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 15px 0;
+  }
+  
+  .Btn {
+    width: 100%; /* You can adjust the width as needed */
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #34378f;
+    border: none;
+    border-radius: 3px;
+    transition: 0.5s ease;
+  }
+  .register-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 15px 0;
+  }
+  .register-text label{
+    font-size: 40px;
+    font-weight: bold;
+  }
+  /* Media Queries for Responsive Design */
+  @media only screen and (min-width: 600px) {
+    .form-field {
+      width: 50%;
+      align-items: left;
+      margin-left: 10px;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .profile {
+      max-width: 900px; /* Adjusted max-width for larger screens */
+    }
+  }
+  
+  @media only screen and (min-width: 992px) {
+    .wrapper {
+      min-height: 60vh; /* Adjusted the minimum height for larger screens */
+    }
+  
+    .form-field {
+      width: 60%; /* Restoring the width for larger screens */
+    }
+  }
+  
